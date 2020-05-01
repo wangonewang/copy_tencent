@@ -49,12 +49,15 @@
     width: 100%;
     margin-bottom: 84px;
 }
-  .details_con {
-    display: block;
-    width: 100%;
-    margin: 0px auto;
-    height: 250px;
+.details_con {
+  display: block;
+  width: 100%;
+  padding: 0 24px;
+  margin: 0px auto;
+  height: 250px;
+  box-sizing: border-box;
 }
+
 .detail_list {
     display: block;
     height: 250px;
@@ -67,6 +70,10 @@ ul, li {
     /* float: left; */
     height: 100%;
     width: 400px;
+    /* width: 31.5%;
+    margin-right: 1.5%;
+    height: 210px; */
+
     text-align: center;
     margin-right: 20px;
     position: relative;
@@ -94,5 +101,30 @@ a:visited, a:link, a:focus {
     z-index: 1;
     transform: scale(1);
     transition: transform 0.3s ease-out;
+}
+.detail_list li a {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+a, a:hover, a:active, a:visited, a:link, a:focus {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    /* -webkit-tap-highlight-color: transparent; */
+    outline: none;
+    background: none;
+    text-decoration: none;
+}
+.detail_list li a:after {
+    display: block;
+    content: "";
+    height: 4px;
+    width: 2px;
+    background: rgba(0,82,217,0.7);
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 2;
+    opacity: 0;
+    transition: opacity 0.3s ease-out;
 }
 </style>

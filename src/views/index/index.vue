@@ -1,10 +1,14 @@
 <template>
  <div id="index">
-   <banner></banner>
+  <banner></banner>
+  <descript></descript>
+  <details-area></details-area>
  </div>
 </template>
 <script>
 import Banner from './banner.vue'
+import Descript from './descript.vue'
+import DetailsArea from './detailsArea.vue'
  export default {
    name:'Index',
    data () {
@@ -13,7 +17,9 @@ import Banner from './banner.vue'
      }
    },
    components: {
-     Banner
+     Banner,
+     Descript,
+     DetailsArea
    },
    computed:{
  
@@ -24,8 +30,8 @@ import Banner from './banner.vue'
  }
 </script>
 <style scoped>
-  #index {
+  /* #index {
     position: relative;
     z-index: 1;
-  }
+  } */
 </style>

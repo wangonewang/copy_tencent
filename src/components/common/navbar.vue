@@ -1,8 +1,14 @@
 <template>
- <div id="nav-bar">
-  <div class="nav-left"><slot name="left"></slot></div>
-  <div class="nav-center"><slot name="center"></slot></div>
-  <div class="nav-right"><slot name="right"></slot></div>
+ <div id="nav-bar"  >
+  <div class="nav-left"
+  :style="this.$store.state.isHover ? {color: '#0052d9'} :{}"
+  ><slot name="left"></slot></div>
+  <div class="nav-center"
+  @click="navCenterClick"
+  :style="this.$store.state.isHover ? {color: 'rgb(0, 0, 0)'} :{}"><slot name="center"></slot></div>
+  <div class="nav-right"
+  :style="this.$store.state.isHover ? {color: '#2b2e2e'} :{}"
+  ><slot name="right"></slot></div>
  </div>
 </template>
 <script>
@@ -21,12 +27,16 @@
  
    },
    methods:{
- 
+     navCenterClick() {
+      
+     }
    },
  }
 </script>
 <style scoped>
  #nav-bar {
+   
+  color: #fff;
   position: fixed; 
   top: 0;
   left: 0;
@@ -36,13 +46,14 @@
   width: 100%;
   height: 70px;
   line-height: 70px;
-  text-align: center;
+  text-align: center; 
   /* background-color: blue; */
    
  }
+
  .nav-left {
    flex: 3;
-   /* background-color: blue; */
+    /* background-color: blue; */
  }
  .nav-center {
    flex: 6;

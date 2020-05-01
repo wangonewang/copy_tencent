@@ -55,14 +55,28 @@ import NavCenterItem from 'common/navCenterItem.vue'
 </script>
 <style scoped>
   #main-tab-bar {
-
+    overflow: hidden;
+    /* width: 100%;
+    height: 80px; */
     /* position: absolute;
     z-index: 9; */
   }
 /* nav-bar样式 */
- .nav-bar {
-   color: #fff;
- }
+ /* .nav-bar {
+   
+  color: red;
+  position: fixed; 
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9;
+  display: flex;
+  width: 100%;
+  height: 70px;
+  line-height: 70px;
+  text-align: center;
+ } */
+ 
  .left {
    text-align: center;
    font-size: 24px;

@@ -1,19 +1,18 @@
 <template>
- <div id="index">
-   <banner></banner>
+ <div>
+   业务页面
  </div>
 </template>
 <script>
-import Banner from './banner.vue'
  export default {
-   name:'Index',
+   name:'Busi',
    data () {
      return {
  
      }
    },
    components: {
-     Banner
+ 
    },
    computed:{
  
@@ -24,8 +23,5 @@ import Banner from './banner.vue'
  }
 </script>
 <style scoped>
-  #index {
-    position: relative;
-    z-index: 1;
-  }
+ 
 </style>

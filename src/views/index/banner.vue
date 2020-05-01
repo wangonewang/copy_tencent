@@ -31,5 +31,7 @@
  }
 </script>
 <style scoped>
- 
+  #banner {
+    /* z-index: 1; */
+  }
 </style>

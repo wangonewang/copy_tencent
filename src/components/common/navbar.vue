@@ -27,7 +27,11 @@
 </script>
 <style scoped>
  #nav-bar {
-  position: fixed;
+  position: fixed; 
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9;
   display: flex;
   width: 100%;
   height: 70px;

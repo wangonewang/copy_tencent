@@ -1,31 +1,32 @@
 <template>
- <div id="index">
-   <banner></banner>
+ <div id="logo" @click="logoClick">
+   Tencent 腾讯
  </div>
 </template>
 <script>
-import Banner from './banner.vue'
  export default {
-   name:'Index',
+   name:'Logo',
+   props: {
+     link: String
+   },
    data () {
      return {
  
      }
    },
    components: {
-     Banner
+ 
    },
    computed:{
  
    },
    methods:{
- 
+     logoClick() {
+       this.$router.push(this.link)
+     }
    },
  }
 </script>
 <style scoped>
-  #index {
-    position: relative;
-    z-index: 1;
-  }
+ 
 </style>

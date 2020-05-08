@@ -127,4 +127,15 @@ a, a:hover, a:active, a:visited, a:link, a:focus {
     opacity: 0;
     transition: opacity 0.3s ease-out;
 }
+.detail_list li p:after {
+    content: ' ';
+    width: 0;
+    height: 2px;
+    background: #fff;
+    bottom: -2px;
+    left: 0;
+    position: absolute;
+    opacity: 0;
+    -webkit-transition: all 0.2s linear;
+}
 </style>

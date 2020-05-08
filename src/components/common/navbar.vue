@@ -5,7 +5,8 @@
   ><slot name="left"></slot></div>
   <div class="nav-center"
   @click="navCenterClick"
-  :style="this.$store.state.isHover ? {color: 'rgb(0, 0, 0)'} :{}"><slot name="center"></slot></div>
+  :style="this.$store.state.isHover ? {color: 'rgb(0, 0, 0)'} :{}"><slot name="center"></slot>
+  </div>
   <div class="nav-right"
   :style="this.$store.state.isHover ? {color: '#2b2e2e'} :{}"
   ><slot name="right"></slot></div>
@@ -36,7 +37,7 @@
 <style scoped>
  #nav-bar {
    
-  color: #fff;
+  color: #eee;
   position: fixed; 
   top: 0;
   left: 0;

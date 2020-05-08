@@ -4,9 +4,16 @@
   margin: 0;
 }
 a {
+  text-decoration: none;
+  outline: none;
   cursor: pointer;
+  color: #000;
 }
 
 body {
-  background-color: #eee;
+  background-color: #fff;
+}
+li {
+  list-style: none;
+  outline: none;
 }

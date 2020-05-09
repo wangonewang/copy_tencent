@@ -25,7 +25,7 @@
 <style scoped>
   #bghover {
     /* width: 100%; */
-    height: 400px;
+    height: 450px;
     background-color: #fff;
     position: fixed;
     top: 0;

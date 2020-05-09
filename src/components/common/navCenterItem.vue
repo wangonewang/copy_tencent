@@ -1,9 +1,12 @@
 <template>
  <div id="nav-center-item" @click="centerItemClick"
-  @mouseover="centerItemHover"
+  @mouseover="centerItemHover(), menu_dis()"
   @mouseleave="centerItemLeave"
   >
    <slot name="nav-text"></slot>
+   <div class="nav_menu" :class="{menu_isShow: isShow_menu}">
+     <slot name="nav_menu"></slot>
+   </div>
  </div>
 </template>
 <script>
@@ -14,7 +17,7 @@
    },
    data () {
      return {
- 
+       isShow_menu: false
      }
    },
    components: {
@@ -37,6 +40,10 @@
      },
      centerItemLeave() {
        this.$store.state.isHover = false
+       this.isShow_menu = false
+     },
+     menu_dis() {
+       this.isShow_menu = true
      }
    },
  }
@@ -44,5 +51,19 @@
 <style scoped>
  #nav-center-item {
    flex: 1;
+   position: relative;
+ }
+ .nav_menu {
+   position: absolute;
+   display: none;
+   top: 70px;
+   /* left: -20px; */
+   width: 140px;
+   height: 370px;
+   /* background-color: orange; */
+ }
+ 
+ .menu_isShow {
+   display: block;
  }
 </style>

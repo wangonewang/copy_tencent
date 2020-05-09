@@ -1,7 +1,7 @@
 <template>
  <div id="banner">
  
- <video width="100%" id="video" 
+ <video width="100%"  id="video" 
  autoplay="" loop="" preload="" 
  muted="" x-webkit-airplay="true"
   airplay="allow" webkit-playsinline="true" 
@@ -33,7 +33,5 @@
 <style scoped>
   #banner {
     /* z-index: 1; */
-    /* width: 100%;
-    height: 90%; */
   }
 </style>

@@ -3,7 +3,11 @@
   <div class="block">
     <el-carousel height="620px">
       <el-carousel-item v-for="item in pics" :key="item.url">
-        <a href="javascript:;"><img :src="item.url" alt=""></a>
+        <a href="javascript:;">
+          <img :src="item.url" alt="">
+          <h4 class="tit">全球战疫</h4>
+          <p class="txt">全球战疫</p>
+        </a>
       </el-carousel-item>
     </el-carousel>
   </div>
@@ -20,7 +24,14 @@
          { url: require('../../assets/img/bg1.jpg') },
          { url: require('../../assets/img/bg2.jpg') },
          { url: require('../../assets/img/bg3.jpg') },
+         { url: require('../../assets/img/bg3.jpg') },
        ]
+      // pics: [
+      //    { url: require('../../assets/img/index_resp_bg0.png') },
+      //    { url: require('../../assets/img/index_resp_bg1.png') },
+      //    { url: require('../../assets/img/index_resp_bg2.png') },
+      //    { url: require('../../assets/img/index_resp_bg3.png') },
+      //  ]
      }
    },
    components: {
@@ -66,6 +77,32 @@
     top: 0;
     object-fit: fill;
   } 
+  .block a {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  .block a .tit {
+    display: block;
+    width: 500px;
+    font-size: 24px;
+    position: absolute;
+    left: 50px;
+    bottom: 110px;
+    color: #ffffff;
+    background-color: orange;
+  }
+  .block a .txt {
+    display: block;
+    width: 500px;
+    font-size: 16px;
+    position: absolute;
+    left: 50px;
+    bottom: 60px;
+    line-height: 29px;
+    color: #fff;
+    background-color: skyblue;
+  }
 .hook_tri {
   display: block;
   width: 43px;

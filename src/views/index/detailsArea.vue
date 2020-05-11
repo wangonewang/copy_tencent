@@ -29,7 +29,7 @@
    name:'DetailsArea',
    data () {
      return {
- 
+
      }
    },
    components: {
@@ -39,7 +39,7 @@
  
    },
    methods:{
- 
+
    },
  }
 </script>
@@ -84,13 +84,7 @@ ul, li {
     margin-right: 1.5%;
     height: 210px;
 }
-a:visited, a:link, a:focus {
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
-    -webkit-tap-highlight-color: transparent;
-    outline: none;
-    background: none;
-    text-decoration: none;
-}
+
 .detail_list li img {
     display: block;
     height: 100%;
@@ -98,34 +92,48 @@ a:visited, a:link, a:focus {
     position: absolute;
     left: 0px;
     top: 0px;
-    z-index: 1;
-    transform: scale(1);
-    transition: transform 0.3s ease-out;
+    transition: all 0.5s ease;
+}   
+.detail_list li a:hover img {
+  transform: scale(1.2);
 }
+
 .detail_list li a {
     display: block;
     height: 100%;
     width: 100%;
+    z-index: 1;
+    transition: all .5s;
+    position: relative;
 }
-a, a:hover, a:active, a:visited, a:link, a:focus {
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
-    /* -webkit-tap-highlight-color: transparent; */
-    outline: none;
-    background: none;
-    text-decoration: none;
-}
+
 .detail_list li a:after {
     display: block;
     content: "";
-    height: 4px;
-    width: 2px;
+    height: 100%;
+    width: 100%;
     background: rgba(0,82,217,0.7);
     position: absolute;
     left: 0px;
     top: 0px;
-    z-index: 2;
+    z-index: 1;
     opacity: 0;
-    transition: opacity 0.3s ease-out;
+    transition: all 0.35s ease;
+}
+.detail_list li a:hover:after {
+  opacity: 1;
+}
+.detail_list li p {
+  display: block;
+  height: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 9;
+  color: #fff;
+  font-size: 25px;
+  padding-bottom: 5px;
 }
 .detail_list li p:after {
     content: ' ';
@@ -136,6 +144,10 @@ a, a:hover, a:active, a:visited, a:link, a:focus {
     left: 0;
     position: absolute;
     opacity: 0;
-    -webkit-transition: all 0.2s linear;
+    transition: all 0.3s ease;
+}
+.detail_list li a:hover p:after {
+  width: 100px;
+  opacity: 1;
 }
 </style>

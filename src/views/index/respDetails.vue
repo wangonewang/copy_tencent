@@ -1,5 +1,6 @@
 <template>
  <div id="respDetails">
+   <!-- <link rel="stylesheet" href="//at.alicdn.com/t/font_1812067_owtqct7n1jq.css"> -->
    <h3 class="tit">
      连接<br/>
      责任与信任
@@ -8,7 +9,8 @@
      聚合微小善行, 以科技让世界更美好
    </p>
    <a href="https://www.tencent.com/zh-cn/responsibility.html">
-     <i> → </i>
+   <!-- <i class="iconfont icon-arrowright1"></i> -->
+   <i></i>
    </a>
  </div>
 </template>
@@ -63,8 +65,9 @@ a {
 }
 i {
   display: inline-block;
-  width: 40Px;
-  height: 40px;
+  width: 38Px;
+  height: 16px;
   /* transform: scaleX(2); */
+  background: url('../../assets/img/icon_arrow_r_dark.png') no-repeat 0/100%;
 }
 </style>

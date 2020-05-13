@@ -1,6 +1,6 @@
 <template>
  <div id="nav-center-item" @click="centerItemClick"
-  @mouseover="centerItemHover(), menu_dis()"
+  @mouseover="centerItemHover"
   @mouseleave="centerItemLeave"
   >
    <slot name="nav-text"></slot>
@@ -37,14 +37,15 @@
       //  console.log('触摸事件')
       // console.log(this.$store.state.isHover)
       this.$store.state.isHover = true
+      this.isShow_menu = true
      },
      centerItemLeave() {
        this.$store.state.isHover = false
        this.isShow_menu = false
      },
-     menu_dis() {
-       this.isShow_menu = true
-     }
+    //  menu_dis() {
+    //    this.isShow_menu = true
+    //  }
    },
  }
 </script>

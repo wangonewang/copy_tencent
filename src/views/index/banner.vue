@@ -14,10 +14,12 @@
       <p class="rtxt">共生未来</p>
     </div>
     <div class="hook_area">
+      <div class="word_box">
       <i class="word word_1">你我</i>
       <i class="word word_2">科技</i>
-      <i class="word word_3">科技</i>
+      <i class="word word_3">企业</i>
       <i class="word word_4">公益</i>
+      </div>
     </div>
   </div>
   <div class="slide_tips">
@@ -82,7 +84,7 @@
     text-align: center;
     letter-spacing: 18px;
     z-index: 2;
-    background-color: orange;
+    /* background-color: orange; */
   }
   .txtbox .ltxt {
     display: inline-block;
@@ -108,20 +110,54 @@
   .hook_area {
     display: block;
     width: 150px;
-    height: 100px;
+    height: 81px;
     position: absolute;
     left: 157px;
-    top: -9px;
+    top: 0px;
     overflow: hidden;
-    background-color: skyblue;
+    /* background-color: skyblue; */
+  }
+  @keyframes word_animation {
+    0% {
+
+    }
+    24% {
+      transform: translateY(0px);
+    }
+    25% {
+      transform: translateY(-81px);
+    }
+    49% {
+      transform: translateY(-81px);
+    }
+
+    50%  {
+      transform: translateY(-162px);
+    }
+    74% {
+      transform: translateY(-162px);
+    }
+    75%  {
+      transform: translateY(-243px);
+    }
+    99% {
+      transform: translateY(-243px);
+    }
+    100%  {
+      transform: translateY(-0px);
+    }
+  }
+  .hook_area .word_box {
+    animation: word_animation 9s infinite ease ;
   }
   .hook_area .word {
     display: block;
     height: 81px;
-    min-width: 160px;
-    position: absolute;
+    min-width: 150px;
+    margin: auto 0;
+    /* position: absolute;
     left: 0px;
-    top: 9px;
+    top: 9px; */
     color: #fff;
     font-size: 54px;
     font-style: normal;

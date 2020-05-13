@@ -1,15 +1,15 @@
 <template>
- <div id="nav-bar"  >
-  <div class="nav-left"
-  :style="this.$store.state.isHover ? {color: '#0052d9'} :{}"
-  ><slot name="left"></slot></div>
-  <div class="nav-center"
-  @click="navCenterClick"
-  :style="this.$store.state.isHover ? {color: 'rgb(0, 0, 0)'} :{}"><slot name="center"></slot>
+ <div class="bar" :class="isFexd == true ? 'navBar' : ''"  >
+  <div class="nav-left">
+    <slot name="left"></slot>
   </div>
-  <div class="nav-right"
-  :style="this.$store.state.isHover ? {color: '#2b2e2e'} :{}"
-  ><slot name="right"></slot></div>
+  <div class="nav-center"
+  @click="navCenterClick">
+    <slot name="center"></slot>
+  </div>
+  <div class="nav-right">
+    <slot name="right"></slot>
+  </div>
  </div>
 </template>
 <script>
@@ -18,7 +18,7 @@
    name:'NavBar',
    data () {
      return {
- 
+       isFexd: true
      }
    },
    components: {
@@ -30,14 +30,27 @@
    methods:{
      navCenterClick() {
       
+     },
+     watchScoll() {
+      //  var scorllTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop 
+       var scrollTop = window.pageYOffset
+       if(scrollTop > 100) {
+         this.isFexd = false
+       }else {
+         this.isFexd = true
+       }
+      //  console.log(scrollTop, this.isFexd)
      }
    },
+   mounted() {
+     window.addEventListener('scroll', this.watchScoll)
+   }
  }
 </script>
 <style scoped>
- #nav-bar {
+ .navBar {
    
-  color: #eee;
+  /* color: red; */
   position: fixed; 
   top: 0;
   left: 0;
@@ -48,20 +61,20 @@
   height: 70px;
   line-height: 70px;
   text-align: center; 
-  /* background-color: blue; */
-   
+  /* transform: translate(0, 200px);
+  transition: all 10s ease; */
+  /* display: none; */
  }
-
  .nav-left {
    flex: 3;
-    /* background-color: blue; */
  }
+ /* .bar a {
+   color: #fff;
+ } */
  .nav-center {
    flex: 6;
-   /* background-color: red; */
  }
  .nav-right {
    flex: 2;
-   /* background-color: pink; */
  }
 </style>
